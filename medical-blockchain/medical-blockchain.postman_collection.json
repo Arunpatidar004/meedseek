@@ -1,0 +1,70 @@
+{
+    "info": {
+      "_postman_id": "cba12345-d1ff-4ab2-b123-7bc34fdb1f00",
+      "name": "Medical Blockchain",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Add Record",
+        "request": {
+          "method": "POST",
+          "header": [],
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "patientId",
+                "value": "patient123",
+                "type": "text"
+              },
+              {
+                "key": "file",
+                "type": "file",
+                "src": ""
+              }
+            ]
+          },
+          "url": {
+            "raw": "http://localhost:3000/addRecord",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["addRecord"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Get Records by Patient ID",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/getRecords/patient123",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["getRecords", "patient123"]
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "Verify Record Integrity",
+        "request": {
+          "method": "GET",
+          "header": [],
+          "url": {
+            "raw": "http://localhost:3000/verifyIntegrity",
+            "protocol": "http",
+            "host": ["localhost"],
+            "port": "3000",
+            "path": ["verifyIntegrity"]
+          }
+        },
+        "response": []
+      }
+    ]
+  }
+  
